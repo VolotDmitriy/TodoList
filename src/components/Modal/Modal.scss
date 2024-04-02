@@ -1,0 +1,51 @@
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #00000050;
+  backdrop-filter: blur(1px);
+
+  .modal {
+    width: 40%;
+    height: 40%;
+    min-height: 100px;
+    padding: 15px;
+
+    display: grid;
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        ". c .";
+    gap: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+
+
+    background: #ffffff;
+    border-radius: 5px;
+
+    .modal__name {
+      grid-area: a;
+      font-size: max(3vh, 12px);
+
+    }
+
+    .modal__desc {
+      resize: none;
+      grid-area: b;
+      font-size: max(3vh, 12px);
+    }
+
+    .modal__save-button {
+      grid-area: c;
+    }
+  }
+}
+
+
+
